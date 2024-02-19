@@ -1,0 +1,26 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+
+\begin{document}
+\begin{tikzpicture}
+    \matrix (kmap) [matrix of nodes,
+    nodes={draw, minimum size=1cm, anchor=center},
+    column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+    column 1/.style={nodes={draw=none, fill=none}},
+    row 1/.style={nodes={draw=none, fill=none}}] {
+    & 00 & 01 & 11 & 10 \\
+    00 & 0 & 1 & 1 & 0 \\
+    01 & 1 & 0 & 0 & 1 \\
+    11 & 1 & 1 & 0 & 0 \\
+    10 & 0 & 0 & 1 & 1 \\
+    };
+
+    % Grouping 1s
+    \begin{scope}[on background layer]
+    \draw[rounded corners, blue, thick] ($(kmap-3-2.north west)+(-0.1,0.1)$) rectangle ($(kmap-4-3.south east)+(0.1,-0.1)$);
+    \draw[rounded corners, red, thick] ($(kmap-2-3.north west)+(-0.1,0.1)$) rectangle ($(kmap-2-4.south east)+(0.1,-0.1)$);
+    \draw[rounded corners, green, thick] ($(kmap-5-4.north west)+(-0.1,0.1)$) rectangle ($(kmap-5-5.south east)+(0.1,-0.1)$);
+    \end{scope}
+\end{tikzpicture}
+\end{document}
