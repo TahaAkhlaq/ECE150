@@ -1,2 +1,2 @@
-# ECE150
-Digital Logic Design
+# ECE150 Digital Logic Design
+## Projects
