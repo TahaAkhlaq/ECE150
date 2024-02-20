@@ -1,5 +1,3 @@
-%-------------------------------------------------PREAMBLE----------------------------------------------------
-
 \documentclass{article} % Use the article class for standard document layout
 \usepackage{tikz}
 \usetikzlibrary{matrix,calc}
@@ -157,10 +155,11 @@
     \foreach \x in {#1}
         \path (\x) node {X};
 }
-%-------------------------------------------------END OF PREAMBLE----------------------------------------------------
 
 
-%-----------------------------------------------------MAIN CODE------------------------------------------------------
+
+%------------------------------------------------------------------------------------------------------------------------------------------
+
 \begin{document}
 
 % Start of Karnaugh maps layout
@@ -168,6 +167,11 @@
 \begin{minipage}{0.5\textwidth} % Left column starts
 
     %Example
+    \begin{center}
+        \textbf{\underline{Example}:}
+    \end{center}
+    \vspace{-10mm}
+        
     \begin{center}
     \begin{Karnaugh}
         \contingut{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -261,7 +265,7 @@
     \overline{A}\,\overline{B}D + \overline{A}CD + A\overline{B}\,\overline{C}
     \]
     \[
-    \overline{A}D(\overline{B}+C)+A\overline{B}\,\overline{C}
+    \overline{A}D(\overline{B} + C) + A\overline{B}\,\overline{C}
     \]
     %
     
@@ -269,7 +273,7 @@
 \hfill % This command adds a horizontal space between the two minipages that fills the available space
 \begin{minipage}{0.5\textwidth} % Right column starts
 
-        %------------------------------------------G2!-------------------------------------------
+    %------------------------------------------G2!-------------------------------------------
     \begin{center}
         \textbf{\underline{\textcolor{darkgreen}{G}2}}\textbf{:}
     \end{center}
@@ -278,14 +282,328 @@
     %Kmap
     \begin{center}
     \begin{Karnaugh}
-        \minterms{1,3,7,8,9} % Places 1 at these positions
-        \implicant{1}{3}{blue}
-        \implicant{3}{7}{red}
-        \implicant{8}{9}{green}
-
+        \minterms{4,5,6} % Places 1 at these positions
+        \implicant{4}{5}{blue}
+        \implicantcostats{4}{6}{green}
     \end{Karnaugh}
     \end{center}
     \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    \overline{A}B\overline{C} + \overline{A}B\overline{D}
+    \]
+    \[
+    \overline{A}B (\overline{C}+\overline{D})
+    \]
+    \[
+    \overline{A}B (\overline{CD})
+    \]
+    %
+
+    %------------------------------------------R3!-------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}3}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \minterms{1,6} % Places 1 at these positions
+        \implicantsol[0]{1}{red} %TO CIRCLE 1 CELL!
+        \implicantsol[0]{6}{blue} 
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    \overline{A}\,\overline{B}\,\overline{C}D + \overline{A}BC\,\overline{D}
+    \]
+    \[
+    \overline{A}(\overline{B}\,\overline{C}D + BC\overline{D})
+    \]
+    %
+
+    %------------------------------------------G3!-------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{darkgreen}{G}3}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \minterms{3,4,5,7} % Places 1 at these positions
+        \implicant{3}{7}{blue}
+        \implicant{4}{5}{red} 
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    \overline{A}B\overline{C} + \overline{A}CD
+    \]
+    \[
+    \overline{A} (B\overline{C} + CD)
+    \]
+    %
     
 \end{minipage} % Right column ends
+
+% Start of Karnaugh maps layout
+\noindent % Ensures the line starts at the left margin
+\begin{minipage}{0.5\textwidth} % Left column starts
+
+    %------------------------------------------R4!-------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}4}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \minterms{1,3,5} % Places 1 at these positions
+        \implicant{1}{3}{blue}
+        \implicant{1}{5}{red}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    \overline{A}\,\overline{C}D + \overline{A}\,\overline{B}D
+    \]
+    \[
+    \overline{A}D (\overline{C} + \overline{B})
+    \]
+    \[
+    \overline{A}D (\overline{CB})
+    \]
+    %
+
+    %------------------------------------------G4!-------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{darkgreen}{G}4}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \minterms{} % Places 1 at these positions
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+
+
+
+
+%------------------------------------------KMAPS FOR Xs!------------------------------------------
+    %--------------------------------------------R1!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}1}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{1,2,5,6,7,9} % Places 1 at these positions
+        \implicant{1}{9}{blue}
+        \implicant{7}{14}{red}
+        \implicant{2}{10}{green}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    C\overline{D} + CB + \overline{C}D
+    \]
+    \[
+    CB + (C\oplus D)
+    \]
+    %
+
+%--------------------------------------------G1!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{darkgreen}{G}1}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{0,3,4,8} % Places 1 at these positions
+        \implicant{0}{8}{blue}
+        \implicantdaltbaix[3pt]{3}{11}{red} %TO CIRCLE OPPOSITE CELLS!
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    \overline{C}\,\overline{D} + \overline{B}CD
+    \]
+    %
+    
+\end{minipage} % Left column ends
+
+\hfill % This command adds a horizontal space between the two minipages that fills the available space
+\begin{minipage}{0.5\textwidth} % Right column starts
+
+%--------------------------------------------R2!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}2}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{1, 3, 7, 8, 9} % Places 1 at these positions
+        \implicant{12}{10}{blue}
+        \implicant{3}{11}{red}
+        \implicantdaltbaix[3pt]{1}{11}{green}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+    A + \overline{B}D + CD
+    \]
+    \[
+    A + D (\overline{B} + C) 
+    \]
+    %
+
+%--------------------------------------------G2!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{darkgreen}{G}2}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{4, 5, 6} % Places 1 at these positions
+        \implicant{4}{13}{blue}
+        \implicant{6}{14}{red}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+     B\overline{C} + BC\overline{D}
+    \]
+    \[
+     B(\overline{C}  + C\overline{D})
+    \]
+    \[
+     B(\overline{C} + \overline{D}) 
+    \]
+    %
+
+%--------------------------------------------R3!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}3}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{1, 6} % Places 1 at these positions
+        \implicantsol[0]{1}{red} %TO CIRCLE 1 CELL!
+        \implicantsol[0]{6}{blue} %TO CIRCLE 1 CELL!
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+     \overline{A}\,\overline{B}\,\overline{C}D + \overline{A}BC\overline{D}
+    \]
+    \[
+     \overline{A} (\overline{B}\,\overline{C}D + BC\overline{D}) 
+    \]
+    \[
+      \overline{A}(B\oplus D)(C\oplus D)
+    \]
+    %
+
+%--------------------------------------------G3!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{darkgreen}{G}3}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{3, 4, 5, 7} % Places 1 at these positions
+        \implicant{3}{11}{blue}
+        \implicant{4}{13}{red}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+     B\overline{C} + CD
+    \]
+    %
+    
+\end{minipage} % Right Column Ends
+
+% Start of Karnaugh maps layout
+\noindent % Ensures the line starts at the left margin
+\begin{minipage}{0.5\textwidth} % Left column starts
+
+%--------------------------------------------R4!---------------------------------------------
+    \begin{center}
+        \textbf{\underline{\textcolor{red}{R}4}}\textbf{:}
+    \end{center}
+    \vspace{-10mm}
+
+    %Kmap
+    \begin{center}
+    \begin{Karnaugh}
+        \indeterminats{11, 10, 12, 13, 14, 15} % Places X at these positions
+        \minterms{1, 3, 5} % Places 1 at these positions
+        \implicant{1}{3}{blue}
+        \implicant{1}{5}{red}
+    \end{Karnaugh}
+    \end{center}
+    \vspace{-10mm}
+
+    % Boolean Expression
+    \[
+     \overline{A}\,\overline{C}D + \overline{A}\,\overline{B}D
+    \]
+    \[
+     \overline{A}D (\overline{C} + \overline{B}) 
+    \]
+    \[
+      \overline{A}D (\overline{CB})
+    \]
+    %
+
+\end{minipage} % Left Column Ends
+
+%---------------------------------------KMAPS FOR Xs!-------------------------------------------
+    
 \end{document}
