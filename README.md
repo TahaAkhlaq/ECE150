@@ -13,8 +13,7 @@ To view '.circ' files, ensure Logisim-Evolution is installed on your computer:
 - **Step 2:** Follow the instructions provided there to download and install Logisim-Evolution.
 
 ## Copyright & Licensing
-Copyright (C) 2024 Taha Akhlaq  
-<[takhlaq04@gmail.com](mailto:takhlaq04@gmail.com)>
+Copyright (C) 2024 Taha Akhlaq <[takhlaq04@gmail.com](mailto:takhlaq04@gmail.com)>
 
 Distributed under the MIT License. See `LICENSE` for details.
 
