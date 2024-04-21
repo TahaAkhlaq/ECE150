@@ -2,4 +2,5 @@
 
 Load Circuit File using Logisim-Evolution
 
-![Circuit_Image](./Circuit_Image.png)
+Circuit Diagram:
+![Circuit Diagram](./Circuit_Diagram.png)
