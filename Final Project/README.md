@@ -1,3 +1,3 @@
-##24-Hour Clock with Stopwatch Circuit
+# 24-Hour Clock with Stopwatch Circuit
 
-Load Circuit File using Logism-Evolution
+Load Circuit File using Logisim-Evolution
