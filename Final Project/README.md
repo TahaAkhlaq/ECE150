@@ -1,4 +1,4 @@
-# 24-Hour Clock with Stopwatch Circuit
+# 24-Hour Clock with Stopwatch
 
 ## Circuit File Download Instructions
 To download the circuit file and view it using Logisim-Evolution, please follow these steps:
@@ -9,6 +9,6 @@ To download the circuit file and view it using Logisim-Evolution, please follow 
 - **Step 4:** Open the downloaded file with Logisim-Evolution.
 
 ## Circuit Diagram
-Below is the circuit diagram for the 24-hour clock with a stopwatch feature:
+Below is the circuit diagram for the 24-Hour Clock with a Stopwatch Feature:
 
 ![Circuit Diagram](Circuit%20Diagram.png)
