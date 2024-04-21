@@ -3,4 +3,4 @@
 Load Circuit File using Logisim-Evolution
 
 Circuit Diagram:
-![Circuit Diagram](./Circuit_Diagram.png)
+![Circuit Diagram](Circuit%20Diagram.png)
