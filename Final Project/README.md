@@ -1,4 +1,4 @@
-# 24-Hour Clock with Stopwatch
+# 24-Hour Clock with Stopwatch -- Taha Akhlaq, Talha Akhlaq, Abhijeet Khirdekar
 
 ## Circuit File Download Instructions
 To download the circuit file and view it using Logisim-Evolution, please follow these steps:
