@@ -1,5 +1,5 @@
 # 24-Hour Clock with Stopwatch 
-### Created by Taha Akhlaq, Talha Akhlaq, Abhijeet Khirdekar
+### Created by [Taha Akhlaq](https://github.com/TahaAkhlaq), [Talha Akhlaq](https://github.com/TalhaAkhlaq), [Abhijeet Khirdekar](https://github.com/akhirdekar)
 
 ## Prerequisites
 To correctly open the final circuit file, ensure that you have the following Logisim-Evolution libraries downloaded and loaded into your environment:
