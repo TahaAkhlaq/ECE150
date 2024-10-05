@@ -14,9 +14,9 @@ To view `.circ` files, ensure Logisim-Evolution is installed on your computer:
 
 ## Projects
 
-- **[Project 1](Project1/)**: BCD to Morse Code Encoder
-- **[Project 2](Project2/)**: Vending Machine Simulation
-- **[Final Project](FinalProject/)**: 24-Hour Clock with Stopwatch
+- **[Project 1]("Project 1/")**: BCD to Morse Code Encoder
+- **[Project 2](Project 2/)**: Vending Machine Simulation
+- **[Final Project](Final Project/)**: 24-Hour Clock with Stopwatch
 
 ## Copyright & Licensing
 Copyright (C) 2024 Taha Akhlaq <[takhlaq04@gmail.com](mailto:takhlaq04@gmail.com)>
