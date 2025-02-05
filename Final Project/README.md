@@ -26,3 +26,10 @@ Below is the Initial Circuit Diagram for the 24-Hour Clock with a Stopwatch Feat
 Below is the Final Circuit Diagram for the 24-Hour Clock with a Stopwatch Feature:
 
 ![Final Circuit Diagram](Final%20Circuit%20Diagram.png)
+
+---
+
+## **Physical Implementation**  
+Below is the fully assembled **breadboard implementation** of the 24-Hour Clock with Stopwatch. This version represents the real-world wiring and integration of all circuit components, constructed and tested in a lab environment.  
+
+![Final Physical Circuit](Final%20Physical%20Circuit.png) 
